@@ -1,0 +1,21 @@
+# Flutter
+frontend/build/
+frontend/.dart_tool/
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+frontend/.packages
+frontend/.pub-cache/
+frontend/ios/.generated/
+frontend/ios/Flutter/flutter_export_environment.sh
+frontend/ios/Flutter/Flutter.podspec
+frontend/android/.gradle/
+frontend/android/build/
+
+# Node.js
+backend/node_modules/
+backend/.env
+backend/dist/
+
+# General
+*.log
+.DS_Store
