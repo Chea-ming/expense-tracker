@@ -91,4 +91,31 @@ export const login = async (req, res) => {
     console.error('Login error:', error);
     res.status(500).json({ message: 'Server error' });
   }
+
+};
+
+// Get user profile
+export const getProfile = async (req, res) => {
+  try {
+    const db = await getDb();
+    
+    // Fetch user data using the userId from the JWT token
+    const user = await db.get('SELECT ID, USERNAME, EMAIL FROM USERS WHERE ID = ?', [req.userId]);
+    
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    
+    res.status(200).json({
+      message: 'Profile retrieved successfully',
+      user: {
+        id: user.ID,
+        username: user.USERNAME,
+        email: user.EMAIL
+      }
+    });
+  } catch (error) {
+    console.error('Profile retrieval error:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
 };
