@@ -24,20 +24,6 @@ A comprehensive mobile application that allows users to track daily expenses, or
 - **Database**: SQLite3
 - **Password Hashing**: bcrypt
 
-## Project Structure
-
-\`\`\`
-expense-tracker/
-├── backend/         # Node.js Express backend
-├── frontend/        # Flutter mobile app
-├── docs/
-│   ├── backend.md   # Backend setup instructions
-│   └── frontend.md  # Frontend setup instructions
-└── README.md        # This file
-\`\`\`
-
-## Getting Started
-
 ### Prerequisites
 
 - Node.js 20.x
