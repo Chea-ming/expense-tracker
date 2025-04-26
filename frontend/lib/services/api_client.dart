@@ -5,7 +5,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 class ApiClient {
   late Dio _dio;
   
-  // Base URL for the API - replace with your actual backend URL
+  // Base URL for the API 
+  // baseUrl could be hidden 
   static const String baseUrl = 'http://localhost:3001/api';
   
   // Singleton pattern for ApiClient
@@ -39,6 +40,8 @@ class ApiClient {
         // Handle 401 Unauthorized errors
         if (error.response?.statusCode == 401) {
           // TODO: Could refresh token or redirect to login
+          // For now, just print the error
+          print('Unauthorized request: ${error.response?.data}');
         }
         return handler.next(error);
       },
