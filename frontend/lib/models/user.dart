@@ -1,29 +1,18 @@
+// User model representing the authenticated user
 class User {
   final int id;
   final String username;
   final String email;
 
+  // Constructor with named parameters for clarity
   User({
     required this.id,
     required this.username,
     required this.email,
   });
 
+  // Factory constructor to create a User from JSON data
   factory User.fromJson(Map<String, dynamic> json) {
-    // Validate required fields
-    if (!json.containsKey('id') ||
-        !json.containsKey('username') ||
-        !json.containsKey('email')) {
-      throw Exception('Missing required fields in JSON');
-    }
-
-    // Validate field types
-    if (json['id'] is! int ||
-        json['username'] is! String ||
-        json['email'] is! String) {
-      throw Exception('Invalid field types in JSON');
-    }
-
     return User(
       id: json['id'],
       username: json['username'],
@@ -31,6 +20,7 @@ class User {
     );
   }
 
+  // Convert User object to JSON for API requests
   Map<String, dynamic> toJson() {
     return {
       'id': id,
