@@ -36,10 +36,6 @@ A comprehensive mobile application for tracking daily expenses, organizing them 
 expense-tracker/
 ├── backend/           # Node.js Express backend
 ├── frontend/          # Flutter mobile app
-├── docs/
-│   ├── backend.md     # Backend setup instructions
-│   └── frontend.md    # Frontend setup instructions
-└── README.md          # Project overview
 ```
 
 ## Getting Started
@@ -63,7 +59,7 @@ expense-tracker/
    npm install
    npm run dev
    ```
-   The backend server will run on `http://localhost:3000`.
+   The backend server will run on `http://localhost:3001`.
 
 3. **Set up the frontend**:
    ```bash
@@ -85,10 +81,6 @@ expense-tracker/
 - `GET /api/expenses/:id` - Retrieve a specific expense
 - `PUT /api/expenses/:id` - Update an existing expense
 - `DELETE /api/expenses/:id` - Delete an expense
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
