@@ -166,7 +166,7 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                 decoration: BoxDecoration(
-                  color: Colors.grey[100],
+                  color: Color(0xFF1E1E1E),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Row(
